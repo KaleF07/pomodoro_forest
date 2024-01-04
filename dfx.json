@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "pomodoro_forest_backend": {
+      "main": "src/pomodoro_forest_backend/main.mo",
+      "type": "motoko"
+    },
+    "pomodoro_forest_frontend": {
+      "dependencies": [
+        "pomodoro_forest_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/pomodoro_forest_frontend/src/index.html"
+      },
+      "source": [
+        "src/pomodoro_forest_frontend/assets",
+        "dist/pomodoro_forest_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
